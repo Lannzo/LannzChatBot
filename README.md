@@ -9,9 +9,44 @@ This is a full-stack AI chatbot application featuring a React/Vite/TypeScript fr
 - Typing indicators and smooth scrolling for a great user experience.
 - AI is personalized with a custom knowledge base (`my_facts.txt`).
 
-### Prerequisites
+## 🚀 How It Works
 
-You will need the following software installed on your computer:
-- [Node.js](https://nodejs.org/) (which includes npm)
-- [Python](https://www.python.org/)
-- [Ollama](https://ollama.com/)
+This application operates on a full-stack architecture, allowing the frontend to communicate with a dedicated backend server that orchestrates AI interactions.
+
+-   **Frontend (Client-Side)**:
+    -   Developed with **React**, **Vite**, and **TypeScript** for a blazing-fast development experience and robust code.
+    -   Styled using **Tailwind CSS** for a utility-first approach to design.
+    -   Manages the chat history, user input, and displays messages with real-time UI updates 
+    -   Communicates with the backend API to send user messages and receive AI responses.
+
+-   **Backend (Server-Side)**:
+    -   Built with **Python** and **Flask**, providing a lightweight and efficient API endpoint.
+    -   Acts as an intermediary, receiving user queries from the frontend.
+    -   Forwards these queries to the local AI model (Ollama) along with a custom "system prompt" and your personal facts.
+    -   Processes the AI's response and sends it back to the frontend.
+
+-   **AI Core (Local LLM)**:
+    -   Powered by **Ollama**, which enables running large language models like **Llama 3** directly on your computer.
+    -   This ensures privacy, speed, and completely free AI inference after the initial model download.
+    -   The AI model uses the provided `my_facts.txt` as its context to generate relevant and personalized answers.
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+-   **React**: A JavaScript library for building user interfaces.
+-   **Vite**: A fast build tool that significantly improves frontend development experience.
+-   **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+-   **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+-   **Lucide React**: Beautiful, open-source icons for React.
+
+### Backend
+-   **Python**: The versatile programming language for server logic.
+-   **Flask**: A micro web framework for Python, used for creating the API.
+-   **Flask-CORS**: Enables Cross-Origin Resource Sharing for seamless frontend-backend communication.
+-   **OpenAI Python Client**: Used to interact with the local Ollama API (which mimics OpenAI's API structure).
+
+### AI / LLM
+-   **Ollama**: A powerful tool for running large language models locally.
+-   **Llama 3**: A state-of-the-art open-source LLM from Meta, serving as the chatbot's brain.
