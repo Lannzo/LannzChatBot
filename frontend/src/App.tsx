@@ -1,4 +1,3 @@
-import React from 'react';
 import Chatbot from './components/chatbot';
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
       </header>
 
       {/* Main Chat Component */}
-      <main className="flex-grow">
+      <main className="bg-gray-100 w-full min-h-screen p-4">
         <Chatbot />
       </main>
 

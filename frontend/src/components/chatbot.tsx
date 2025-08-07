@@ -136,7 +136,7 @@ function Chatbot() {
   };
 
   return (
-    <div className="flex flex-col h-96 w-full max-w-md mx-auto bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden">
+    <div className="flex flex-col h-[calc(100vh-2rem)] w-full max-w-3xl mx-auto bg-white rounded-lg shadow-2xl border border-gray-300 overflow-hidden">
       
       {/* Header */}
       <div className="bg-blue-600 p-4 text-white">
@@ -157,7 +157,7 @@ function Chatbot() {
       </div>
 
       {/* Chat Area */}
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
+      <div className="flex-1 p-4 overflow-y-auto bg-gray-50 rounded-b-lg">
         
         {/* Welcome message */}
         {chatHistory.length === 0 && (
@@ -197,7 +197,7 @@ function Chatbot() {
               </div>
 
               {/* Message bubble */}
-              <div className={`flex flex-col max-w-xs ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
+              <div className={`flex flex-col max-w-lg ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                 <div className={`px-4 py-2 rounded-lg ${
                   msg.role === 'user' 
                     ? 'bg-blue-600 text-white' 
